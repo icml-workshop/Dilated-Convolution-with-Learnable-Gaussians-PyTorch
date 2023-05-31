@@ -12,12 +12,6 @@ python3 -m pip install dist/dclg-0.0.1-py3-none-any.whl
 
 ```
 
-**Install the last stable version from** [**PyPI**](https://pypi.org/project/DCLS/):
-
-```bash
-pip3 install dclg
-```
-
 ## Usage
 Dcls methods could be easily used as a substitue of Pytorch's nn.Conv**n**d classical convolution method:
 
