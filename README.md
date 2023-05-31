@@ -25,7 +25,7 @@ input = torch.randn(20, 16, 50, 100)
 output = m(input)
 loss = output.sum()
 loss.backward()
-print(output, m.weight.grad, m.P.grad)
+print(output, m.weight.grad, m.P.grad, m.SIG.grad)
 ```
 A typical use is with the separable convolution
 
@@ -38,7 +38,7 @@ input = torch.randn(128, 96, 56, 56)
 output = m(input)
 loss = output.sum()
 loss.backward()
-print(output, m.weight.grad, m.P.grad)
+print(output, m.weight.grad, m.P.grad, m.SIG.grad)
 ```
 
 Dcls with different dimensions 
@@ -52,7 +52,7 @@ input = torch.rand(8, 3, 32)
 output = m(input)
 loss = output.sum()
 loss.backward()
-print(output, m.weight.grad, m.P.grad)
+print(output, m.weight.grad, m.P.grad, m.SIG.grad)
 ```
 
 ```python
@@ -64,5 +64,5 @@ input = torch.randn(20, 16, 50, 100, 30)
 output = m(input)
 loss = output.sum()
 loss.backward()
-print(output, m.weight.grad, m.P.grad)
+print(output, m.weight.grad, m.P.grad, m.SIG.grad)
 ```
